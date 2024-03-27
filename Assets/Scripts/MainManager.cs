@@ -12,6 +12,7 @@ public class MainManager : MonoBehaviour
 
     public Text ScoreText;
     public GameObject GameOverText;
+    public GameObject ExitText;
     
     private bool m_Started = false;
     private int m_Points;
@@ -59,6 +60,9 @@ public class MainManager : MonoBehaviour
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
+            else if(Input.GetKeyDown(KeyCode.Escape)){
+                SceneManager.LoadScene(0);
+            }
         }
     }
 
@@ -72,5 +76,6 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        ExitText.SetActive(true);
     }
 }

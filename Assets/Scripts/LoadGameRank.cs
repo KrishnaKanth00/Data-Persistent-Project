@@ -26,7 +26,7 @@ public class LoadGameRank : MonoBehaviour
         }
         else
         {
-            bestUserName.text = "Best Score - " + bestUser +":"+bestScore;
+            bestUserName.text = $"Best Score - " + bestUser +":"+bestScore;
         }
     }
     //To load the Games highest score after each game 

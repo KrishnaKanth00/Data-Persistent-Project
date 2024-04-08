@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEditor;
+using TMPro;
 
 public class MenuUIHandler : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI UserNameInput;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +19,10 @@ public class MenuUIHandler : MonoBehaviour
     void Update()
     {
         
+    }
+    public void GetUserName()
+    {
+        DataPersistenceManager.Instance.userName = UserNameInput.text;
     }
     public void StartNew()
     {

@@ -44,7 +44,7 @@ public class LoadGameRank : MonoBehaviour
     }
     //To save the data of the high score and best player
     [System.Serializable]
-class SaveData
+    class SaveData
     {
         public int highestScore;
         public string bestUserName;
